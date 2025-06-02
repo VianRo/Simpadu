@@ -97,7 +97,7 @@
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img
-                  src=""
+                  src="{{ asset('assets/img/' . $data['foto']) }}"
                   class="user-image rounded-circle shadow"
                   alt="User Image"
                 />
@@ -107,13 +107,12 @@
                 <!--begin::User Image-->
                 <li class="user-header text-bg-primary">
                   <img
-                    src=""
+                    src="{{ asset('assets/img/' . $data['foto']) }}"
                     class="rounded-circle shadow"
                     alt="User Image"
                   />
                   <p>
-                     - Web Developer
-                    <small>Member since Nov. 2023</small>
+                    {{ $data['nama'] }}
                   </p>
                 </li>
                 <!--end::User Image-->
@@ -134,7 +133,7 @@
         <!--end::Container-->
       </nav>
       <!--end::Header-->
-      <!-- Bootstrap JS -->
+      <!-- Bootstrap JS (cukup satu ini saja, hapus yang lain) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 @include('template.sidebar')
@@ -165,19 +164,7 @@
       integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ="
       crossorigin="anonymous"
     ></script>
-    <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
-    <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+    <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(AdminLTE)-->
     <script src="{{ asset('js/adminlte.js') }}"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script>
@@ -406,6 +393,15 @@
       const sparkline3 = new ApexCharts(document.querySelector('#sparkline-3'), option_sparkline3);
       sparkline3.render();
     </script>
+    <script>
+  // Inisialisasi semua dropdown Bootstrap setelah DOM siap
+  document.addEventListener('DOMContentLoaded', function () {
+    var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+    dropdownElementList.map(function (dropdownToggleEl) {
+      return new bootstrap.Dropdown(dropdownToggleEl)
+    })
+  });
+</script>
     <!--end::Script-->
   </body>
   <!--end::Body-->

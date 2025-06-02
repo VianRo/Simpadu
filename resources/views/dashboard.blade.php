@@ -2,7 +2,7 @@
 
 @section('content')
 
-KONICHIWA
+{{-- {{ dd($data) }} --}}
 @endsection
 
 
