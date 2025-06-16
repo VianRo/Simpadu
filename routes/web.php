@@ -20,4 +20,6 @@ route::get('/', [DashboardController::class, 'index'])
     ->name('dashboard.index');
 route::get('/mahasiswa', [MahasiswaController::class, 'index'])
     ->name('mahasiswa.index');
-Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])->name('mahasiswa.create');
+Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])
+    ->name('mahasiswa.create');
+Route::resource('mahasiswa', MahasiswaController::class);

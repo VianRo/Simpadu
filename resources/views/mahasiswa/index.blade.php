@@ -66,7 +66,7 @@
                             <td>{{ $m->Tanggal_lahir }}</td>
                             <td>{{ $m->Telp }}</td>
                             <td>{{ $m->Email }}</td>
-                            <td>{{ $m->Prodi->Nama }}</td>
+                            <td>{{ $m->prodi->Nama }}</td>
                             <td>
                                 <!-- Action buttons (edit/delete) bisa ditambahkan di sini -->
                                 <a href="" class="btn btn-warning btn-sm">Edit</a>
