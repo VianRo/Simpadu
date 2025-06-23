@@ -3,6 +3,7 @@
 use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProdiController;
 
 
 /*
@@ -23,3 +24,4 @@ route::get('/mahasiswa', [MahasiswaController::class, 'index'])
 Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])
     ->name('mahasiswa.create');
 Route::resource('mahasiswa', MahasiswaController::class);
+Route::resource('prodi', \App\Http\Controllers\ProdiController::class);

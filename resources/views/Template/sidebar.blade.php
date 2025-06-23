@@ -1,4 +1,4 @@
-      <!--begin::Sidebar-->
+<!--begin::Sidebar-->
       <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
@@ -29,15 +29,15 @@
               data-accordion="false"
             >
               <li class="nav-item">
-                <a href="./Index.php" class="nav-link">
+                <a href="{{ url('mahasiswa') }}" class="nav-link">
                 <i class="bi bi-mortarboard-fill"></i>
                   <p>Mahasiswa</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./Prodi.php" class="nav-link">
-                <i class="bi bi-card-heading"></i>
-                  <p>Prodi</p>
+                <a href="{{ url('prodi') }}" class="nav-link">
+                    <i class="bi bi-card-heading"></i>
+                    <p>Prodi</p>
                 </a>
               </li>
             </ul>

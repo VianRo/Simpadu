@@ -9,16 +9,12 @@ class Mahasiswa extends Model
 {
     use HasFactory;
     protected $table = 'mahasiswa';
+    protected $primaryKey = 'NIM';
+    public $incrementing = false;
+    protected $keyType = 'string'; 
 
     protected $fillable = [
-        'NIM',
-        'Nama', 
-        'Tanggal_lahir',
-        'Telp',
-        'Email',
-        'Password',
-        'Foto',
-        'Id' // Ini adalah foreign key ke tabel prodi
+        'NIM', 'Nama', 'Tanggal_lahir', 'Telp', 'Email', 'Password', 'Id', 'Foto'
     ];
 
     public function prodi()

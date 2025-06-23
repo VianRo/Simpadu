@@ -1,13 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <!--begin::Head-->
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AdminLTE v4 | Dashboard</title>
-    <!--begin::Primary Meta Tags-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="AdminLTE v4 | Dashboard" />
-    <meta name="author" content="ColorlibHQ" />
+<head>
+    <meta charset="UTF-8">
+    <title>@yield('title', 'Aplikasi Mahasiswa')</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #181a1b !important;
+            color: #f8f9fa !important;
+        }
+    </style>
     <meta
       name="description"
       content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS."
@@ -58,10 +60,12 @@
       integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4="
       crossorigin="anonymous"
     />
+    @stack('styles')
   </head>
   <!--end::Head-->
   <!--begin::Body-->
   <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    
     <!--begin::App Wrapper-->
     <div class="app-wrapper">
       <!--begin::Header-->
@@ -187,6 +191,8 @@
         }
       });
     </script>
+        @stack('scripts')
+
     <!--end::OverlayScrollbars Configure-->
     <!-- OPTIONAL SCRIPTS -->
     <!-- sortablejs -->

@@ -9,12 +9,11 @@ class Prodi extends Model
 {
     use HasFactory;
     protected $table = 'prodi';
-    
+    protected $primaryKey = 'Id'; // <--- tambahkan ini
+    public $timestamps = false; // jika tabel tidak ada created_at/updated_at
+
     protected $fillable = [
-        'Id',
-        'Nama',
-        'Kaprodi',
-        'Jurusan'
+        'Nama', 'Kaprodi', 'Jurusan'
     ];
 
     public function mahasiswa()
